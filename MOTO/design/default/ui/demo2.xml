@@ -1,0 +1,37 @@
+<?xml ruler_x="400" ruler_y="240"?>
+<window name="demo2" style:normal:bg_color="#000000" style:normal:bg_image="demo2_bg">
+  <progress_circle max="164" name="progress_circle" x="197" y="38" w="409" h="409" start_angle="138" line_width="30" line_cap="square" style:normal:bg_image="" style:normal:bg_image_draw_type="default" style:normal:icon_at="auto" sensitive="false" style:normal:fg_image="progress_bar" style:normal:fg_color="#00000000" style:normal:bg_color="#00000000" style:normal:font_size="120" style:normal:font_name="moto_font" style:normal:text_color="#000000" style:normal:text_align_v="middle" style:disable:font_name="moto_font" value="0"/>
+  <view name="temperature" x="120" y="156" w="561" h="168">
+    <image name="left_bg" x="5" y="0" w="32" h="168" draw_type="default" image="woter_temperature"/>
+    <image name="left_black" x="5" y="0" w="32" h="168" draw_type="default" style:normal:bg_color="#000000"/>
+    <image name="right_bg" x="529" y="0" w="32" h="168" draw_type="default" image="gasoline_temperature"/>
+    <image name="right_black" x="529" y="0" w="32" h="168" draw_type="default" style:normal:bg_color="#000000"/>
+  </view>
+  <button name="grade" x="c" y="402" w="52" h="49" style:normal:round_radius="10" style:normal:bg_image="" style:normal:font_name="moto_font" style:normal:font_size="32" style:normal:text_color="#FFFFFF" style:disable:font_name="moto_font" style:normal:bg_color="#00000000" style:normal:border_width="0" style:normal:border_color="#00000000" text="5"/>
+  <image name="veer_left" x="10" y="2" w="57" h="49" draw_type="default" image="light_left"/>
+  <image name="veer_right" x="r:10" y="2" w="57" h="49" draw_type="default" image="light_right"/>
+  <image name="light_distance" x="77" y="10" w="40" h="30" draw_type="default" image="light_distance"/>
+  <image name="light_vicinity" x="120" y="10" w="40" h="30" draw_type="default" image="light_vicinity"/>
+  <image name="demo2_abs" x="10" y="123" w="48" h="34" draw_type="default" image="ABS"/>
+  <image name="demo2_brake" x="10" y="71" w="48" h="34" draw_type="default" image="brake"/>
+  <image name="demo2_engine" x="164" y="433" w="54" h="31" draw_type="default" image="engine"/>
+  <label name="label" x="170" y="12" w="61" h="29" style:normal:font_name="moto_font" style:normal:font_size="24" style:normal:text_color="#FFFFFF" style:disable:font_name="moto_font" text="AUTO"/>
+  <image name="accumulator" x="10" y="430" w="52" h="37" draw_type="default" image="accumulator"/>
+  <image name="temp" x="38" y="218" w="54" h="45" draw_type="default" image="temperature" clickable="true"/>
+  <image name="oil" x="706" y="218" w="54" h="45" draw_type="default" image="fuel_tank" clickable="true"/>
+  <digit_clock name="digit_clock" x="635" y="6" w="101" h="34" format="hh：mm" style:normal:text_color="#FFFFFF" style:normal:font_size="28" style:normal:font_name="moto_font" style:disable:font_name="moto_font"/>
+  <image name="img_wifi" x="599" y="12" w="33" h="24" draw_type="scale" image="WIFI"/>
+  <image name="img_bt" x="565" y="10" w="16" h="26" draw_type="scale" image="bt"/>
+  <label name="data1" x="77" y="438" w="65" h="29" style:normal:font_name="moto_font" style:normal:font_size="28" style:normal:text_color="#FFFFFF" style:normal:text_align_h="right" style:disable:font_name="moto_font" text="12.2V"/>
+  <label name="label" x="555" y="451" w="61" h="29" style:normal:font_name="moto_font" style:normal:font_size="24" style:normal:text_color="#FFFFFF" style:disable:font_name="moto_font" text="TOTAL"/>
+  <label name="data2" x="649" y="445" w="100" h="35" style:normal:font_name="moto_font" style:normal:font_size="32" style:normal:text_color="#FFFFFF" style:disable:font_name="moto_font" text="88888"/>
+  <label name="label" x="761" y="451" w="42" h="29" style:normal:font_name="moto_font" style:normal:font_size="24" style:normal:text_color="#FFFFFF" style:normal:text_align_h="left" style:disable:font_name="moto_font" text="KM"/>
+  <button name="scale1" x="c" y="373" w="70" h="35" style:normal:round_radius="4" style:normal:bg_color="#000000" style:normal:border_width="0" style:normal:text_color="#FFFFFF" style:normal:font_name="moto_font" visible="true" enable="false" style:disable:border_color="#00000000" style:disable:border_width="0" style:disable:text_color="#FFFFFF" style:disable:font_name="moto_font" style:disable:bg_color="#00000000" style:disable:font_size="32" style:disable:round_radius="5" text="GEAR"/>
+  <image name="curve_right" x="441" y="354" w="42" h="44" draw_type="default" image="demo2_right"/>
+  <image name="curve_left" x="310" y="354" w="42" h="44" draw_type="default" image="demo2_left"/>
+  <button name="scale1" x="366" y="312" w="70" h="35" style:normal:round_radius="4" style:normal:bg_color="#000000" style:normal:border_width="0" style:normal:text_color="#FFFFFF" style:normal:font_name="moto_font" visible="true" enable="false" style:disable:border_color="#00000000" style:disable:border_width="0" style:disable:text_color="#FFFFFF" style:disable:font_name="moto_font" style:disable:bg_color="#00000000" style:disable:font_size="32" style:disable:round_radius="5" text="km/h"/>
+  <button name="scale1" x="328" y="165" w="43" h="17" style:normal:round_radius="4" style:normal:bg_color="#000000" style:normal:border_width="0" style:normal:text_color="#FFFFFF" style:normal:font_name="moto_font" visible="true" enable="false" style:disable:border_color="#00000000" style:disable:border_width="0" style:disable:text_color="#FFFFFF" style:disable:font_name="moto_font" style:disable:bg_color="#00000000" style:disable:font_size="16" style:disable:round_radius="5" text="SPORT"/>
+  <button name="scale1" x="414" y="164" w="52" h="17" style:normal:round_radius="4" style:normal:bg_color="#000000" style:normal:border_width="0" style:normal:text_color="#FFFFFF" style:normal:font_name="moto_font" visible="true" enable="false" style:disable:border_color="#00000000" style:disable:border_width="0" style:disable:text_color="#000000" style:disable:font_name="moto_font" style:disable:bg_color="#00000000" style:disable:font_size="16" style:disable:round_radius="5" text="comfort"/>
+  <button name="scale1" x="c" y="130" w="70" h="35" style:normal:round_radius="4" style:normal:bg_color="#000000" style:normal:border_width="0" style:normal:text_color="#FFFFFF" style:normal:font_name="moto_font" visible="true" enable="false" style:disable:border_color="#00000000" style:disable:border_width="0" style:disable:text_color="#FFFFFF" style:disable:font_name="moto_font" style:disable:bg_color="#00000000" style:disable:font_size="32" style:disable:round_radius="5" text="MODE"/>
+  <button name="scale1" x="c" y="98" w="76" h="17" style:normal:round_radius="4" style:normal:bg_color="#000000" style:normal:border_width="0" style:normal:text_color="#FFFFFF" style:normal:font_name="moto_font" visible="true" enable="false" style:disable:border_color="#00000000" style:disable:border_width="0" style:disable:text_color="#FFFFFF" style:disable:font_name="moto_font" style:disable:bg_color="#00000000" style:disable:font_size="16" style:disable:round_radius="5" text="1000r/min"/>
+</window>

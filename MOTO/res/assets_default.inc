@@ -1,0 +1,146 @@
+#include "awtk.h"
+#include "base/assets_manager.h"
+#ifndef WITH_FS_RES
+#include "assets/default/inc/ui/demo.data"
+#include "assets/default/inc/ui/demo1.data"
+#include "assets/default/inc/ui/demo2.data"
+#include "assets/default/inc/ui/demo3.data"
+#include "assets/default/inc/styles/default.data"
+#ifdef WITH_STB_IMAGE
+#include "assets/default/inc/images/ABS.res"
+#include "assets/default/inc/images/accumulator.res"
+#include "assets/default/inc/images/bg.res"
+#include "assets/default/inc/images/brake.res"
+#include "assets/default/inc/images/bt.res"
+#include "assets/default/inc/images/demo1_bg.res"
+#include "assets/default/inc/images/demo1_bg2.res"
+#include "assets/default/inc/images/demo2_bg.res"
+#include "assets/default/inc/images/demo2_left.res"
+#include "assets/default/inc/images/demo2_right.res"
+#include "assets/default/inc/images/demo3.res"
+#include "assets/default/inc/images/demo3_arcbg.res"
+#include "assets/default/inc/images/demo3_pointer.res"
+#include "assets/default/inc/images/demo3_progress_bar.res"
+#include "assets/default/inc/images/demo4_bg.res"
+#include "assets/default/inc/images/electric_quantity.res"
+#include "assets/default/inc/images/engine.res"
+#include "assets/default/inc/images/foundation_ring.res"
+#include "assets/default/inc/images/fuel_tank.res"
+#include "assets/default/inc/images/gasoline_temperature.res"
+#include "assets/default/inc/images/left_bg.res"
+#include "assets/default/inc/images/left_path.res"
+#include "assets/default/inc/images/left_value.res"
+#include "assets/default/inc/images/left_value_black.res"
+#include "assets/default/inc/images/light_distance.res"
+#include "assets/default/inc/images/light_left.res"
+#include "assets/default/inc/images/light_left_big.res"
+#include "assets/default/inc/images/light_right.res"
+#include "assets/default/inc/images/light_right_big.res"
+#include "assets/default/inc/images/light_vicinity.res"
+#include "assets/default/inc/images/oil.res"
+#include "assets/default/inc/images/pointer.res"
+#include "assets/default/inc/images/pointer7.res"
+#include "assets/default/inc/images/progress_bar.res"
+#include "assets/default/inc/images/rev.res"
+#include "assets/default/inc/images/right_bg.res"
+#include "assets/default/inc/images/right_path.res"
+#include "assets/default/inc/images/right_value.res"
+#include "assets/default/inc/images/right_value_black.res"
+#include "assets/default/inc/images/speed.res"
+#include "assets/default/inc/images/speed_black.res"
+#include "assets/default/inc/images/speed_left.res"
+#include "assets/default/inc/images/speed_right.res"
+#include "assets/default/inc/images/TCS.res"
+#include "assets/default/inc/images/temp.res"
+#include "assets/default/inc/images/temperature.res"
+#include "assets/default/inc/images/temp_black.res"
+#include "assets/default/inc/images/wheel_left.res"
+#include "assets/default/inc/images/wheel_right.res"
+#include "assets/default/inc/images/WIFI.res"
+#include "assets/default/inc/images/woter_temperature.res"
+#else
+#endif /*WITH_STB_IMAGE*/
+#ifdef WITH_VGCANVAS
+#endif /*WITH_VGCANVAS*/
+#ifdef WITH_TRUETYPE_FONT
+#include "assets/default/inc/fonts/default.res"
+#include "assets/default/inc/fonts/moto_font.res"
+#else /*WITH_TRUETYPE_FONT*/
+#endif /*WITH_TRUETYPE_FONT*/
+#endif /*WITH_FS_RES*/
+
+ret_t assets_init(void) {
+  assets_manager_t* am = assets_manager();
+  assets_manager_set_theme(am, "default");
+
+#ifdef WITH_FS_RES
+  assets_manager_preload(am, ASSET_TYPE_STYLE, "default");
+#else
+  assets_manager_add(am, ui_demo);
+  assets_manager_add(am, ui_demo1);
+  assets_manager_add(am, ui_demo2);
+  assets_manager_add(am, ui_demo3);
+  assets_manager_add(am, style_default);
+  assets_manager_add(am, image_ABS);
+  assets_manager_add(am, image_accumulator);
+  assets_manager_add(am, image_bg);
+  assets_manager_add(am, image_brake);
+  assets_manager_add(am, image_bt);
+  assets_manager_add(am, image_demo1_bg);
+  assets_manager_add(am, image_demo1_bg2);
+  assets_manager_add(am, image_demo2_bg);
+  assets_manager_add(am, image_demo2_left);
+  assets_manager_add(am, image_demo2_right);
+  assets_manager_add(am, image_demo3);
+  assets_manager_add(am, image_demo3_arcbg);
+  assets_manager_add(am, image_demo3_pointer);
+  assets_manager_add(am, image_demo3_progress_bar);
+  assets_manager_add(am, image_demo4_bg);
+  assets_manager_add(am, image_electric_quantity);
+  assets_manager_add(am, image_engine);
+  assets_manager_add(am, image_foundation_ring);
+  assets_manager_add(am, image_fuel_tank);
+  assets_manager_add(am, image_gasoline_temperature);
+  assets_manager_add(am, image_left_bg);
+  assets_manager_add(am, image_left_path);
+  assets_manager_add(am, image_left_value);
+  assets_manager_add(am, image_left_value_black);
+  assets_manager_add(am, image_light_distance);
+  assets_manager_add(am, image_light_left);
+  assets_manager_add(am, image_light_left_big);
+  assets_manager_add(am, image_light_right);
+  assets_manager_add(am, image_light_right_big);
+  assets_manager_add(am, image_light_vicinity);
+  assets_manager_add(am, image_oil);
+  assets_manager_add(am, image_pointer);
+  assets_manager_add(am, image_pointer7);
+  assets_manager_add(am, image_progress_bar);
+  assets_manager_add(am, image_rev);
+  assets_manager_add(am, image_right_bg);
+  assets_manager_add(am, image_right_path);
+  assets_manager_add(am, image_right_value);
+  assets_manager_add(am, image_right_value_black);
+  assets_manager_add(am, image_speed);
+  assets_manager_add(am, image_speed_black);
+  assets_manager_add(am, image_speed_left);
+  assets_manager_add(am, image_speed_right);
+  assets_manager_add(am, image_TCS);
+  assets_manager_add(am, image_temp);
+  assets_manager_add(am, image_temperature);
+  assets_manager_add(am, image_temp_black);
+  assets_manager_add(am, image_wheel_left);
+  assets_manager_add(am, image_wheel_right);
+  assets_manager_add(am, image_WIFI);
+  assets_manager_add(am, image_woter_temperature);
+#ifdef WITH_VGCANVAS
+#endif /*WITH_VGCANVAS*/
+#ifdef WITH_TRUETYPE_FONT
+  assets_manager_add(am, font_default);
+  assets_manager_add(am, font_moto_font);
+#else /*WITH_TRUETYPE_FONT*/
+#endif /*WITH_TRUETYPE_FONT*/
+#endif
+
+  tk_init_assets();
+  return RET_OK;
+}

@@ -1,0 +1,8 @@
+LIBRARY   button_ex
+EXPORTS
+    button_ex_register
+    button_ex_supported_render_mode
+    button_ex_create
+    button_ex_cast
+    button_ex_set_new_h
+    button_ex_get_widget_vtable
